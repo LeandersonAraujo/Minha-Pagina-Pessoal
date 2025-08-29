@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bahiana&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leanderson - Professor de Português</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .logo {
+            position: absolute;
+            left: 0;
+        }
+        
+        .logo-img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+        
+        .header-image {
+            position: absolute;
+            right: 0;
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+        
+        .main-title {
+            font-family: "Bahiana", sans-serif;
+            font-size: 3rem;
+            color: #2c3e50;
+            margin: 0;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin: 10px 0 20px;
+            font-weight: 600;
+        }
+        
+        .header-text {
+            text-align: center;
+            padding: 20px 0 10px;
+            border-top: 1px solid #eaeaea;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            font-family: "Bahiana", sans-serif;
+            border-bottom: 2px solid #6a11cb;
+            padding-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        li {
+            background: #f8f9fa;
+            border-left: 4px solid #6a11cb;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .btn-download {
+            display: inline-block;
+            background: #6a11cb;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+        }
+        
+        .btn-download:hover {
+            background: #2575fc;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 117, 252, 0.4);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+            }
+            
+            .logo, .header-image {
+                position: static;
+                margin-bottom: 15px;
+            }
+            
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="logo">
+                    
+   ![alt text](https://github.com/LeandersonAraujo/Minha-Pagina-Pessoal/raw/main/art/cactofull.jpeg)
+                </div>
+                
+                <h1 class="main-title">Meu Espaço Pessoal</h1>
+                
+                <img src="images/cactofull.png" alt="Ícone" class="header-image">
+            </div>
+            
+            <h2 class="subtitle">Leanderson de Araújo Machado</h2>
+            <p class="tagline">Professor de Português</p>
+            
+            <div class="header-text">
+                <p>Bem-vindo ao meu portfólio profissional</p>
+            </div>
+        </header>
+        
+        <div class="content">
+            <h2>Experiência Profissional</h2>
+            <p>Atividades realizadas nos últimos anos:</p>
+            <ul>
+                <li><strong>Consultoria e Assessoria Acadêmica</strong><br>
+                Orientação, apoio, revisão gramatical e produção de trabalhos acadêmicos.<br>
+                <em>Período: 2024-atual</em></li>
+                
+                <li><strong>Estagiário na modalidade EJA - Unidade Escolar Anísio Brito</strong><br>
+                <em>Período: Agosto-Outubro 2023</em></li>
+                
+                <li><strong>Pibidiano na Escola Judith Alves Santana</strong><br>
+                Ensino de gramática, literatura e redação para turmas do ensino médio.<br>
+                <em>Período: 2022 - 2023</em></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+            <h2>Formação Acadêmica e Qualificações</h2>
+            <ul>
+                <li><strong>Licenciando em Letras/Português - Universidade Estadual do Piauí</strong><br>
+                <em>Período: 2020 - atual</em></li>
+                
+                <li><strong>Técnico em Administração (gestão e negócio) - Centro Estadual de Educação Governador Hugo Napoleão</strong><br>
+                <em>Ano de formação: 2019</em></li>
+            </ul>
+            <p><a href="#" class="btn-link">Certificado de conclusão</a></p>
+        </div>
+        
+        <div class="content">
+            <h2>Contato</h2>
+            <p>Estou disponível para oportunidades de ensino, revisão de textos e consultoria acadêmica.</p>
+            <p>Email: araujoleanderson45@gmail.com<br>
+            Telefone: (86) 999-677-356</p>
+        </div>
+        
+        <center>
+            <a href="#" class="btn-download">Baixar currículo em PDF</a>
+        </center>
+    </div>
+    
+    <div class="footer">
+        &copy; 2025 Leanderson de Araújo Machado - Todos os direitos reservados
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentElements = document.querySelectorAll('.content');
+            
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+                    rect.bottom >= 0
+                );
+            }
+            
+            function checkElements() {
+                contentElements.forEach(function(element) {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            checkElements();
+            
+            window.addEventListener('scroll', checkElements);
+        });
+    </script>
+</body>
+</html>
